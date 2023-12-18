@@ -1,0 +1,31 @@
+{
+  "name": "backend-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test1": "jest janus.spec.js --testNamePattern='Create new customer and user'",
+    "test2": "jest cards.spec.js --testNamePattern='Calculate XB fees'",
+    "test3": "jest janus.spec.js --testNamePattern='Create a new user for an existing customer'",
+    "test4": "jest janus.spec.js --testNamePattern='Update user password'",
+    "test5": "jest ledger.spec.js --testNamePattern='Customer Log API Endpoint'",
+    "test6": "jest cards.spec.js --testNamePattern='Authorization declined'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "jest-runner-groups": "^2.2.0",
+    "kafkajs": "^2.2.4",
+    "pg": "^8.11.3",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
