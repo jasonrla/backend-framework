@@ -1,0 +1,24 @@
+
+customerId: a8623297-66d5-48c2-8c6a-41400df8836d
+username: jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit
+cardId: e4664b98-547e-4a83-b466-4df4103720de
+
+customerId: f7fe83af-321e-445c-8854-5ffd4ac6ec19
+username: jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit
+cardId: b3dd1de6-c937-4d28-83af-7c4a47464827
+
+customerId: f071f150-04a8-4e50-a085-9b49317af133
+username: jason.lopez+dev_us_sadm_nxt_qq@tribal.credit
+cardId: 3a8346fd-a10c-4b02-8b8a-3e3fcf848e3d
+
+customerId: 5ffd62da-6f1d-44bd-a728-90534396fe87
+username: jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit
+cardId: 9ac410ba-23f7-4c40-b1d7-3176b978ec00
+
+customerId: 31ce58a6-d7b8-4d6f-bb7b-cb584228f478
+username: jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit
+cardId: 87fc421e-5fe5-4bf4-9b79-0c82d63ff627
+
+customerId: 42dbaada-8161-4333-a361-4cab78154f4c
+username: jason.lopez+dev_us_sadm_nxt_1o@tribal.credit
+cardId: 8f59d25f-5fe2-4f6f-bd49-0dc226b107cf

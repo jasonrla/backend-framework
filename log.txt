@@ -1,0 +1,2358 @@
+2024-02-07 16:49:50:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "priscila.arreola+chiletsa@tribal.credit",
+  "password": "8x593TIaV4zA]Q1)"
+}
+2024-02-07 16:49:53:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiNzg5MDAzMy0zZTI5LTMzMzQtYjEzMTEyNDIyNDAtMTAwMDA0NDM2IiwiZXhwIjoxNzA3MzMxNzkzLCJpYXQiOjE3MDczMjQ1OTMsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ0cmliYWxfc3VwZXJfYWRtaW4iLCJzdXBlcl9hZG1pbiJdLCJzdWIiOiIxYWJiNGJjMi01YTBiLTRjY2EtYTE4ZC01YWRhZDllNDcwMDQiLCJ0b2tlblVzYWdlIjoiaWQifQ.c3HoYLO_d0sGypuI2ypsQNNwlJVVsnTGzmKJdxCrkIuT2PrfQ99gE0r36UVw1QWr6CGgq-42emBWxdwbwATm5EgaKb_YU8PvTEA_3rzGEw_lQjFLyR5dv4N0VNqhN0z8xEYN3Wr2h_g6a3pllqvVwOiYSKAlns5AsjAUCeD9MNGo_4SywiYfJbDkAqHm16J-AG_mxmlc41ZHKMITQEaRXNKF05SwX8rBMf2PeJnNuZfTAlv_lixnirFODp7JpsoDKIUts6vT2CIGkDXVlXmFa1SAifBVJPLTaovsVnWDYBLhpgdzu1krer38JmvJcNTO2A4gAytuZAAp3wrf6Vb2x3O6t6E6TdwIS5mrFkWK50MOOG6jKUbFhE0RTNw-zpZFojp-pP7UafBV-dciXfZ7f9ELKC9GtTmM0ZO3OimLG_xkFldXUmyTauuWALq9X38oDePEzZWLRW4xP4FB0bkLoixNojpDSnnKbohO0j7DwCbA0XB4bmLXtsR47FiyDBwFW3p21rHawMebidYO7QuZ9BWLd-XGG0CXQS_3QSMyp_0hHG2MeqJdTQpZwel2Nusx9zSGyDZmU4_eizBpViOBbHgsr0LZM1JiLcjU60kFiC19OfUSbVgTVUhcE1C4Xpmf_7ksq1nLgV1wrhbgerBd_sUG_hXCupyD0ARKvwAq9_Y",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-07 16:49:53:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "name": "Emiratos Arabes company - qe",
+  "legalName": "Emiratos Arabes company - qe",
+  "country": "AE",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Av Dubai",
+    "line2": "",
+    "country": "AE",
+    "state": "Dubai",
+    "city": "Dubai",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "AED",
+  "exposure": "1x"
+}
+2024-02-07 16:49:53:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "name": "Emiratos Arabes company - qe",
+  "legalName": "Emiratos Arabes company - qe",
+  "country": "AE",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Av Dubai",
+    "line2": "",
+    "country": "AE",
+    "state": "Dubai",
+    "city": "Dubai",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "AED",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-07T16:49:53Z",
+  "updatedAt": "2024-02-07T16:49:53Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-07 16:49:53:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-07 16:49:53:
+LEDGER PARAMS: [
+  "a8623297-66d5-48c2-8c6a-41400df8836d"
+]
+2024-02-07 16:49:55:
+Reading database... Attempt 0/20
+2024-02-07 16:49:57:
+Reading database... Attempt 1/20
+2024-02-07 16:49:58:
+Reading database... Attempt 2/20
+2024-02-07 16:49:59:
+Reading database... Attempt 3/20
+2024-02-07 16:50:00:
+Reading database... Attempt 4/20
+2024-02-07 16:50:01:
+Reading database... Attempt 5/20
+2024-02-07 16:50:02:
+QUERY RESULT: [
+  {
+    "customer_id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-07T21:50:02.759Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "AED",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "367250000000",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "367250000000",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-07 16:50:02:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-07 16:50:03:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:03:
+PUT /v1/admin/customers/a8623297-66d5-48c2-8c6a-41400df8836d/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-07 16:50:03:
+PUT /v1/admin/customers/a8623297-66d5-48c2-8c6a-41400df8836d/contract-signed 
+RESPONSE: {
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "contractSigned": true
+}
+2024-02-07 16:50:03:
+POST /v1/customers/a8623297-66d5-48c2-8c6a-41400df8836d/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-07 16:50:04:
+POST /v1/customers/a8623297-66d5-48c2-8c6a-41400df8836d/business-areas 
+RESPONSE: {
+  "id": "69766010-4f44-490f-a81d-52958a39ffeb",
+  "name": "Engineering",
+  "customerID": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "UpdatedAt": "2024-02-07T16:50:04Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-07 16:50:04:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-07 16:50:04:
+JANUS PARAMS: [
+  "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "Engineering"
+]
+2024-02-07 16:50:05:
+QUERY RESULT: [
+  {
+    "id": "69766010-4f44-490f-a81d-52958a39ffeb",
+    "name": "Engineering",
+    "customer_id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+    "updated_at": "2024-02-07T21:50:04.154Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-07 16:50:05:
+POST /v1/users 
+REQUEST: {
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "businessAreaID": "69766010-4f44-490f-a81d-52958a39ffeb",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "phoneNumber": "+966989898900",
+  "role": "user",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD"
+}
+2024-02-07 16:50:06:
+POST /v1/users 
+RESPONSE: {
+  "id": "a241f32d-08bd-4e47-b678-04e42caa4121",
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "businessAreaId": "69766010-4f44-490f-a81d-52958a39ffeb",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "password": "ws5073i+EXQ6Y<8x",
+  "email": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+966989898900",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-07 16:50:06:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-07 16:50:06:
+LEDGER PARAMS: [
+  "a241f32d-08bd-4e47-b678-04e42caa4121"
+]
+2024-02-07 16:50:07:
+Reading database... Attempt 0/20
+2024-02-07 16:50:08:
+Reading database... Attempt 1/20
+2024-02-07 16:50:09:
+Reading database... Attempt 2/20
+2024-02-07 16:50:10:
+Reading database... Attempt 3/20
+2024-02-07 16:50:11:
+Reading database... Attempt 4/20
+2024-02-07 16:50:13:
+Reading database... Attempt 5/20
+2024-02-07 16:50:14:
+QUERY RESULT: [
+  {
+    "customer_id": "a8623297-66d5-48c2-8c6a-41400df8836d",
+    "user_id": "a241f32d-08bd-4e47-b678-04e42caa4121",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-07T21:50:14.379Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "AED",
+    "pref_currency_credit_limit": "734500000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-07 16:50:14:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "userId": "a241f32d-08bd-4e47-b678-04e42caa4121",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-07 16:50:15:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:15:
+PUT /v1/users/a241f32d-08bd-4e47-b678-04e42caa4121/password 
+REQUEST: {
+  "oldPassword": "ws5073i+EXQ6Y<8x",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:17:
+PUT /v1/users/a241f32d-08bd-4e47-b678-04e42caa4121/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-07 16:50:17:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:20:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiYTg2MjMyOTctNjZkNS00OGMyLThjNmEtNDE0MDBkZjg4MzZkIiwiZXhwIjoxNzA3MzMxODIwLCJpYXQiOjE3MDczMjQ2MjAsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6ImEyNDFmMzJkLTA4YmQtNGU0Ny1iNjc4LTA0ZTQyY2FhNDEyMSIsInRva2VuVXNhZ2UiOiJpZCJ9.JZnIP_cIU1Rd6eceN8p09vf_gc7p863QKIor7ANLXHzPbR6pes5xhYHatEeXeN2CVX2NrR58COTFTSUwcRz_g4Pdynyo9Un0vYvhYliTnIj91Pizr5ooF90gPtNiL-Y3fpV7wBKOz399GXeMulCp1LI1XSwoDSZ29iIrLf9Pn_JGCw5xBxdwLCIsd07OaQrQNx7CyKVUpDz3LB6eqy3KskzGNOO8J2xJb44e1dinXOmSuegZDgO4AcEBWD22g4fxcBPnLWOV4mra0gEe7sfpa07Affdi7dwWaFFVNQlINoHjfjodi1pc2617kEFwsjghFq3M93ZqvvmSrL50R1Jx9ofvrV57PEYcPyglxXJUypE_hR6ixkuL-xF7vdxRVLq5ySoAQRwP8_piKWWJZOPRSL8hpvhaZYK9IHNeAJkYztM51hIMOAl0dFWC1BTubmv9qJ85MH5Y536In55KndewG-SnOQfJ5Az4u9-fI5-QsJYK2WaxrpSTJ5bLZijB_n3KH5MXUwp62YJwAOvVoTyWFPNqcKXx850A7nwedwqy_MhA-gWcjOvoNKTFOExwQXzW8ftzNahXRUPe3xrYYBCrMDRN2p2ibWODtbS2E3TDFHZdT6_j2lmdTTqOW1uoeGXqarVQkM2j3vyRpU8BsiIdNzV2flb41ESQoXg7uAmC-hA",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-07 16:50:20:
+PUT /v1/users/a241f32d-08bd-4e47-b678-04e42caa4121/general-info 
+REQUEST: {
+  "businessAreaId": "69766010-4f44-490f-a81d-52958a39ffeb",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "phoneNumber": "+966989898900",
+  "role": "super_admin",
+  "preferredLanguage": "EN"
+}
+2024-02-07 16:50:20:
+PUT /v1/users/a241f32d-08bd-4e47-b678-04e42caa4121/general-info 
+RESPONSE: {
+  "businessAreaId": "69766010-4f44-490f-a81d-52958a39ffeb",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_ae_sadm_nxt_qe@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+966989898900",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-07 16:50:20:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-07 16:50:21:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "e4664b98-547e-4a83-b466-4df4103720de",
+  "userId": "a241f32d-08bd-4e47-b678-04e42caa4121",
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-07T16:50:21Z",
+  "updatedAt": "2024-02-07T16:50:21Z"
+}
+2024-02-07 16:50:21:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "a8623297-66d5-48c2-8c6a-41400df8836d",
+  "userId": "a241f32d-08bd-4e47-b678-04e42caa4121",
+  "role": "super_admin"
+}
+2024-02-07 16:50:21:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:21:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "name": "Mexico company - vk",
+  "legalName": "Mexico company - vk",
+  "country": "MX",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Av Mexico 123",
+    "line2": "",
+    "country": "MX",
+    "state": "CDMX",
+    "city": "CDMX",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "MXN",
+  "exposure": "1x"
+}
+2024-02-07 16:50:21:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "name": "Mexico company - vk",
+  "legalName": "Mexico company - vk",
+  "country": "MX",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Av Mexico 123",
+    "line2": "",
+    "country": "MX",
+    "state": "CDMX",
+    "city": "CDMX",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "MXN",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-07T16:50:21Z",
+  "updatedAt": "2024-02-07T16:50:21Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-07 16:50:21:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-07 16:50:21:
+LEDGER PARAMS: [
+  "f7fe83af-321e-445c-8854-5ffd4ac6ec19"
+]
+2024-02-07 16:50:21:
+QUERY RESULT: [
+  {
+    "customer_id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-07T21:50:21.714Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "MXN",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "1722076774200",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "1722076774200",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-07 16:50:21:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-07 16:50:22:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:22:
+PUT /v1/admin/customers/f7fe83af-321e-445c-8854-5ffd4ac6ec19/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-07 16:50:22:
+PUT /v1/admin/customers/f7fe83af-321e-445c-8854-5ffd4ac6ec19/contract-signed 
+RESPONSE: {
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "contractSigned": true
+}
+2024-02-07 16:50:22:
+POST /v1/customers/f7fe83af-321e-445c-8854-5ffd4ac6ec19/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-07 16:50:23:
+POST /v1/customers/f7fe83af-321e-445c-8854-5ffd4ac6ec19/business-areas 
+RESPONSE: {
+  "id": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+  "name": "Engineering",
+  "customerID": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "UpdatedAt": "2024-02-07T16:50:23Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-07 16:50:23:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-07 16:50:23:
+JANUS PARAMS: [
+  "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "Engineering"
+]
+2024-02-07 16:50:24:
+QUERY RESULT: [
+  {
+    "id": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+    "name": "Engineering",
+    "customer_id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+    "updated_at": "2024-02-07T21:50:23.021Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-07 16:50:24:
+POST /v1/users 
+REQUEST: {
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "businessAreaID": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "phoneNumber": "+529876786544",
+  "role": "user",
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "MXN"
+}
+2024-02-07 16:50:26:
+POST /v1/users 
+RESPONSE: {
+  "id": "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3",
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "businessAreaId": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "password": "87&rs2jwF(59Jb0c",
+  "email": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+529876786544",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "MXN",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-07 16:50:26:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-07 16:50:26:
+LEDGER PARAMS: [
+  "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3"
+]
+2024-02-07 16:50:26:
+Reading database... Attempt 0/20
+2024-02-07 16:50:27:
+Reading database... Attempt 1/20
+2024-02-07 16:50:28:
+Reading database... Attempt 2/20
+2024-02-07 16:50:29:
+QUERY RESULT: [
+  {
+    "customer_id": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+    "user_id": "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "MXN",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-07T21:50:29.401Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "MXN",
+    "pref_currency_credit_limit": "200000000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-07 16:50:29:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "userId": "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-07 16:50:30:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:30:
+PUT /v1/users/d6f1237c-d1b5-4d58-b3da-7db1da4c64e3/password 
+REQUEST: {
+  "oldPassword": "87&rs2jwF(59Jb0c",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:32:
+PUT /v1/users/d6f1237c-d1b5-4d58-b3da-7db1da4c64e3/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-07 16:50:32:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:34:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiZjdmZTgzYWYtMzIxZS00NDVjLTg4NTQtNWZmZDRhYzZlYzE5IiwiZXhwIjoxNzA3MzMxODM0LCJpYXQiOjE3MDczMjQ2MzQsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6ImQ2ZjEyMzdjLWQxYjUtNGQ1OC1iM2RhLTdkYjFkYTRjNjRlMyIsInRva2VuVXNhZ2UiOiJpZCJ9.IEc3ZkpXGswTz6h9RfBlxJgYMCnH2-OD0TLQJkNmhyMeodV8aJlXC-pr8R5rUkTNTD6BlsP4MaeFAA7nNFeMOkQPyZExid8tjhFqKxEdAphIgWwA7J1I4jCNWfxTkgG5gYwDobQ1ox6rcbYJFFJwMFqip8AeFMliVYBxWXaw_x4sBbU1ePeP067KBJ5kGHc8hsTvdTkAylIldmQMjh3AvE_eXzeYBoSD7iZpzXtEh1aoE40fG0NdasxxNS14AwQxFHAV2MihvQ_qtHK-nu0ThDqCAfKXAZpLdw3RZ7vCbXOYWgyI8xtE2dsxyL6NrNWt6KbPINfbR9UztqCvCRbSmUDMU6yCeLdRIHRKFhDo-LSZhZaB-qXX6VGs2dRJizxuAViCbHh8khtCDwKuB81Qa1seKhICRh3zqKKQAxiE1WeM7IONr6XaGIm8RHvBTqLLZcCJ14p9AK2XMxcijKqRPPxFPihS-c_lJM3o2jqGBHG_jHz6E9TO_kh13-FXTG93Mw2qtIGAf9lbsN7oumeKoY8246E0ALFXjY0-RnOpE0cYci0JYwzE4E18_z23rpef4q_i-Y5As2IvqCJX94zDBbTRBI-uPsx8gNGue85UCHc-TXh0xz4frIB_rinoWLk1Kat4a-kCfnWYQi_-6GCOVjrT0vucvrv6eEnWOIe4dKc",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-07 16:50:34:
+PUT /v1/users/d6f1237c-d1b5-4d58-b3da-7db1da4c64e3/general-info 
+REQUEST: {
+  "businessAreaId": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "phoneNumber": "+529876786544",
+  "role": "super_admin",
+  "preferredLanguage": "ES"
+}
+2024-02-07 16:50:34:
+PUT /v1/users/d6f1237c-d1b5-4d58-b3da-7db1da4c64e3/general-info 
+RESPONSE: {
+  "businessAreaId": "293f86c8-2088-4f51-88f3-6aa0bd8d104d",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_mx_sadm_nxt_vk@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+529876786544",
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-07 16:50:34:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-07 16:50:35:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "b3dd1de6-c937-4d28-83af-7c4a47464827",
+  "userId": "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3",
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-07T16:50:34Z",
+  "updatedAt": "2024-02-07T16:50:34Z"
+}
+2024-02-07 16:50:35:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "f7fe83af-321e-445c-8854-5ffd4ac6ec19",
+  "userId": "d6f1237c-d1b5-4d58-b3da-7db1da4c64e3",
+  "role": "super_admin"
+}
+2024-02-07 16:50:35:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:35:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "f071f150-04a8-4e50-a085-9b49317af133",
+  "name": "United States company - qq",
+  "legalName": "United States company - qq",
+  "country": "US",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Washington ave",
+    "line2": "",
+    "country": "US",
+    "state": "New York",
+    "city": "New York",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "USD",
+  "exposure": "1x"
+}
+2024-02-07 16:50:36:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "f071f150-04a8-4e50-a085-9b49317af133",
+  "name": "United States company - qq",
+  "legalName": "United States company - qq",
+  "country": "US",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Washington ave",
+    "line2": "",
+    "country": "US",
+    "state": "New York",
+    "city": "New York",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "USD",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-07T16:50:36Z",
+  "updatedAt": "2024-02-07T16:50:36Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-07 16:50:36:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-07 16:50:36:
+LEDGER PARAMS: [
+  "f071f150-04a8-4e50-a085-9b49317af133"
+]
+2024-02-07 16:50:36:
+Reading database... Attempt 0/20
+2024-02-07 16:50:37:
+QUERY RESULT: [
+  {
+    "customer_id": "f071f150-04a8-4e50-a085-9b49317af133",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-07T21:50:36.736Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "USD",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "100000000000",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "100000000000",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-07 16:50:37:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "f071f150-04a8-4e50-a085-9b49317af133",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-07 16:50:37:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:37:
+PUT /v1/admin/customers/f071f150-04a8-4e50-a085-9b49317af133/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-07 16:50:37:
+PUT /v1/admin/customers/f071f150-04a8-4e50-a085-9b49317af133/contract-signed 
+RESPONSE: {
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "contractSigned": true
+}
+2024-02-07 16:50:37:
+POST /v1/customers/f071f150-04a8-4e50-a085-9b49317af133/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-07 16:50:38:
+POST /v1/customers/f071f150-04a8-4e50-a085-9b49317af133/business-areas 
+RESPONSE: {
+  "id": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+  "name": "Engineering",
+  "customerID": "f071f150-04a8-4e50-a085-9b49317af133",
+  "UpdatedAt": "2024-02-07T16:50:38Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-07 16:50:38:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-07 16:50:38:
+JANUS PARAMS: [
+  "f071f150-04a8-4e50-a085-9b49317af133",
+  "Engineering"
+]
+2024-02-07 16:50:39:
+QUERY RESULT: [
+  {
+    "id": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+    "name": "Engineering",
+    "customer_id": "f071f150-04a8-4e50-a085-9b49317af133",
+    "updated_at": "2024-02-07T21:50:38.027Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-07 16:50:39:
+POST /v1/users 
+REQUEST: {
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "businessAreaID": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "phoneNumber": "+19293452349",
+  "role": "user",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD"
+}
+2024-02-07 16:50:40:
+POST /v1/users 
+RESPONSE: {
+  "id": "e97cff03-dd61-4085-98b1-242cdceef9f4",
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "businessAreaId": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "password": "saqM0b9~f]S1R365",
+  "email": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+19293452349",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-07 16:50:40:
+LEDGER PARAMS: [
+  "e97cff03-dd61-4085-98b1-242cdceef9f4"
+]
+2024-02-07 16:50:40:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-07 16:50:40:
+QUERY RESULT: [
+  {
+    "customer_id": "f071f150-04a8-4e50-a085-9b49317af133",
+    "user_id": "e97cff03-dd61-4085-98b1-242cdceef9f4",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-07T21:50:40.779Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "USD",
+    "pref_currency_credit_limit": "200000000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-07 16:50:40:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "userId": "e97cff03-dd61-4085-98b1-242cdceef9f4",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-07 16:50:41:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-07 16:50:41:
+PUT /v1/users/e97cff03-dd61-4085-98b1-242cdceef9f4/password 
+REQUEST: {
+  "oldPassword": "saqM0b9~f]S1R365",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:43:
+PUT /v1/users/e97cff03-dd61-4085-98b1-242cdceef9f4/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-07 16:50:43:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-07 16:50:45:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiZjA3MWYxNTAtMDRhOC00ZTUwLWEwODUtOWI0OTMxN2FmMTMzIiwiZXhwIjoxNzA3MzMxODQ1LCJpYXQiOjE3MDczMjQ2NDUsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6ImU5N2NmZjAzLWRkNjEtNDA4NS05OGIxLTI0MmNkY2VlZjlmNCIsInRva2VuVXNhZ2UiOiJpZCJ9.RfRWq6Pr3b87ejFAHKEa1eg5MIMi7UCIRjqpyVKilUnW-go25DHX3UCFs_Bv-PD9VGh56BoJVhIrpcGY2Lcnfmj1ZKELwpBUvFYcS606ZwELq9qrm3n4W_uXJviNbOBH6_V_u8DV-CqsKCJchRLEicMebiRRNaYaOOH0AKG866PUlD3if-4qXiPvceoPfcwA4ooKNEum20XcU__PTNwaYWxyQOCvYyPoj-9cZ2Lsz7mnfxpbXgGw1CZwYFQG4sGiigtY8bSjo2uk-th5CDMFxagJA6UVSenVAvkn8Ml_jGHv7StoxhyKQ0l7aZDyt7kj6a3OQCkvJHSOmoZKFcia9YJvUgoDa0uAtZbRIj7jQvjDtu_WdGBlgbc5cUpX-fnXtlEILXCpGA7FCMN8clwILai4I6hNO228VxclhHad-1pMO0JpM1rgz-I2guaFL2PqDlqPzd8jQH7zmeDKZzNgcoRo5twNhKNYaRlZdPTTizl3SEIlmWMI3filqmgtB5p-6XWAYkhGnpfw8Mda-nPWTsyf6jWuX-wSaz6RggMM40Ic-qdHGEkkL8SEI94Q65x4EMhk_qk5uY5KM08Fvd8EIT0bNgct6LOIkvXCD6JOD2jfdOeP-lQTyHN8pXRNaVF71OXBuC6nnor4SwEAIeR_lHiaDx7wD3KVutpgRY1deeY",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-07 16:50:45:
+PUT /v1/users/e97cff03-dd61-4085-98b1-242cdceef9f4/general-info 
+REQUEST: {
+  "businessAreaId": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "phoneNumber": "+19293452349",
+  "role": "super_admin",
+  "preferredLanguage": "EN"
+}
+2024-02-07 16:50:45:
+PUT /v1/users/e97cff03-dd61-4085-98b1-242cdceef9f4/general-info 
+RESPONSE: {
+  "businessAreaId": "90c72e0b-5e24-48b9-8f1e-c2563509448f",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_us_sadm_nxt_qq@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+19293452349",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-07 16:50:45:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-07 16:50:46:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "3a8346fd-a10c-4b02-8b8a-3e3fcf848e3d",
+  "userId": "e97cff03-dd61-4085-98b1-242cdceef9f4",
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-07T16:50:46Z",
+  "updatedAt": "2024-02-07T16:50:46Z"
+}
+2024-02-07 16:50:46:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "f071f150-04a8-4e50-a085-9b49317af133",
+  "userId": "e97cff03-dd61-4085-98b1-242cdceef9f4",
+  "role": "super_admin"
+}
+2024-02-07 16:50:46:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:51:47:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "priscila.arreola+chiletsa@tribal.credit",
+  "password": "8x593TIaV4zA]Q1)"
+}
+2024-02-19 21:51:50:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiNzg5MDAzMy0zZTI5LTMzMzQtYjEzMTEyNDIyNDAtMTAwMDA0NDM2IiwiZXhwIjoxNzA4Mzg2NzEwLCJpYXQiOjE3MDgzNzk1MTAsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ0cmliYWxfc3VwZXJfYWRtaW4iLCJzdXBlcl9hZG1pbiJdLCJzdWIiOiIxYWJiNGJjMi01YTBiLTRjY2EtYTE4ZC01YWRhZDllNDcwMDQiLCJ0b2tlblVzYWdlIjoiaWQifQ.FrCmuAxNfWTcWBOGKb5wKOS7H8OLVlpGSFZP5TxubYVZhGLI9Vb5n_gjD0bjE6ZAyrGlkgFCXvlwbjlSGNFYsjCjc19k3c1_Z-WGf906PENgEZcyEjldAJNbRoyqS5YlGk6ufhOdI-BTG_pvz5FzDzlgC3LJsWvQ0QJ12SFft33Nl1e__K1obzGhBtdqzPrcOiNA9nJxhx-bXQ3Qt4DlGff-51_HhFSVoQEyC5IglbcuPHSypnGnnMjSendGnLFYzfWKW_7GpGDoJqwLrcmgDcHJqw2F8wMlVCeNLKv8jAJ3-D3T8THVEJRa-Qzt86d0Yi86IrGzUhOL29TtjwgdZGRW8wYbqn67Z4A_gPXlhCDbx_CxZ_Xy8mYSLITZL3ZOOTKKw6LF6Ca8Sdp4RxjfYRSwX9Okxom-5ELSO0jzEMlzCxofrs22LsO7SW6xW4j9TrKNtuxZGWnhNADnaynBdpuUfayIc9opHOalN2h5eklLgrSL9SfCfFUV2sPoSJvGEFdZ2rQScEy5ZOoOF-vJZgPrEA6Qe0NmyIIokYs_0lEyyULJwgFUg4JFSwLcd-WM2tkbCOOHBuGnT1oy0vugsxbuWXyMiNS4pb88LJeKr4jfcXcADMzNam-lc18DRe_YVyjW0UW2mcdTCylud-7_3Ys6Z-9gQfxodO082a-OPqk",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-19 21:51:50:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "name": "Emiratos Arabes company - ey",
+  "legalName": "Emiratos Arabes company - ey",
+  "country": "AE",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Av Dubai",
+    "line2": "",
+    "country": "AE",
+    "state": "Dubai",
+    "city": "Dubai",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "AED",
+  "exposure": "1x"
+}
+2024-02-19 21:51:50:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "name": "Emiratos Arabes company - ey",
+  "legalName": "Emiratos Arabes company - ey",
+  "country": "AE",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Av Dubai",
+    "line2": "",
+    "country": "AE",
+    "state": "Dubai",
+    "city": "Dubai",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "AED",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-19T21:51:50Z",
+  "updatedAt": "2024-02-19T21:51:50Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-19 21:51:50:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-19 21:51:50:
+LEDGER PARAMS: [
+  "5ffd62da-6f1d-44bd-a728-90534396fe87"
+]
+2024-02-19 21:51:52:
+QUERY RESULT: [
+  {
+    "customer_id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-20T02:51:50.764Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "AED",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "367250000000",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "367250000000",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-19 21:51:52:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-19 21:51:53:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:51:53:
+PUT /v1/admin/customers/5ffd62da-6f1d-44bd-a728-90534396fe87/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-19 21:51:53:
+PUT /v1/admin/customers/5ffd62da-6f1d-44bd-a728-90534396fe87/contract-signed 
+RESPONSE: {
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "contractSigned": true
+}
+2024-02-19 21:51:53:
+POST /v1/customers/5ffd62da-6f1d-44bd-a728-90534396fe87/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-19 21:51:53:
+POST /v1/customers/5ffd62da-6f1d-44bd-a728-90534396fe87/business-areas 
+RESPONSE: {
+  "id": "93328420-7a5a-4395-8364-8676dd086059",
+  "name": "Engineering",
+  "customerID": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "UpdatedAt": "2024-02-19T21:51:53Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-19 21:51:53:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-19 21:51:53:
+JANUS PARAMS: [
+  "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "Engineering"
+]
+2024-02-19 21:51:54:
+QUERY RESULT: [
+  {
+    "id": "93328420-7a5a-4395-8364-8676dd086059",
+    "name": "Engineering",
+    "customer_id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+    "updated_at": "2024-02-20T02:51:53.682Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-19 21:51:54:
+POST /v1/users 
+REQUEST: {
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "businessAreaID": "93328420-7a5a-4395-8364-8676dd086059",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "phoneNumber": "+966989898900",
+  "role": "user",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD"
+}
+2024-02-19 21:51:56:
+POST /v1/users 
+RESPONSE: {
+  "id": "08af17f9-5999-43d5-8e61-15b99ca32fae",
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "businessAreaId": "93328420-7a5a-4395-8364-8676dd086059",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "password": "W~I3X\\97YS54ku2x",
+  "email": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+966989898900",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-19 21:51:56:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-19 21:51:56:
+LEDGER PARAMS: [
+  "08af17f9-5999-43d5-8e61-15b99ca32fae"
+]
+2024-02-19 21:51:57:
+Reading database... Attempt 0/20
+2024-02-19 21:51:58:
+Reading database... Attempt 1/20
+2024-02-19 21:51:59:
+Reading database... Attempt 2/20
+2024-02-19 21:52:00:
+Reading database... Attempt 3/20
+2024-02-19 21:52:01:
+Reading database... Attempt 4/20
+2024-02-19 21:52:03:
+Reading database... Attempt 5/20
+2024-02-19 21:52:04:
+Reading database... Attempt 6/20
+2024-02-19 21:52:05:
+Reading database... Attempt 7/20
+2024-02-19 21:52:06:
+QUERY RESULT: [
+  {
+    "customer_id": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+    "user_id": "08af17f9-5999-43d5-8e61-15b99ca32fae",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-20T02:52:05.681Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "AED",
+    "pref_currency_credit_limit": "734500000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-19 21:52:06:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "userId": "08af17f9-5999-43d5-8e61-15b99ca32fae",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-19 21:52:06:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:06:
+PUT /v1/users/08af17f9-5999-43d5-8e61-15b99ca32fae/password 
+REQUEST: {
+  "oldPassword": "W~I3X\\97YS54ku2x",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:09:
+PUT /v1/users/08af17f9-5999-43d5-8e61-15b99ca32fae/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-19 21:52:09:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:10:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiNWZmZDYyZGEtNmYxZC00NGJkLWE3MjgtOTA1MzQzOTZmZTg3IiwiZXhwIjoxNzA4Mzg2NzMwLCJpYXQiOjE3MDgzNzk1MzAsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6IjA4YWYxN2Y5LTU5OTktNDNkNS04ZTYxLTE1Yjk5Y2EzMmZhZSIsInRva2VuVXNhZ2UiOiJpZCJ9.PscOhKUrq-y1j0q7EbmnZrHNX6-uHrw9oYGmzEvEa_5igPh2NLV2PawF9CD6V7cg4I4n773ZleS3O-J26JvyLe6usLQ93gUn7fuo2JV-8_RL0FS9glj5DNuHetppnvj-x30YCKxYQv37HyaivOmwHZMfzqdR3nHNH3IScb8zvUiJI1OHV8E7FMxz8z-RanrZbcvC76rcxzwur_8qiv3Tl-tKLzB4gLETooO0xuDk4oaHpmu13JLCMsMGnVd3l36D29Y3dd-1pdfH02bvfIaCGxY2Ahy8PiDojjE6OZ-3teBR-E7c_1_Ozf4be5sQGQevkaTWA2_CE7AVaQlt3sN0W__Oye7rKn-r7uaLz9lKtZ91rwJDAUhbqeM8El7gmmIodZgtvq9lHabxg-ysBeIYCK2ex24dkiqsRoFGJWT_l_FKyaPf0o0RdDGhbmplD-w99MWh3BAeEliJVVL-8BqMJyV6ep96PTlzjEfh9dC_57RqMQ-nB-CsO3AmEbVa0HtIrLx5PXzWgV4oma6HfiTAnyBIm5r1GM-cQiAlwfj1s6mtY2Ae1X1t0J5StLG_ntdFZ-6EL5oQ0xuN8xtciwYU3xkBLNb69cptI2wpEQc0ENWdXLwojBCr7_9PFpgM08o1XRn8urub6yZsmN66Q6beejEJdTwZzdiIqfkAmHPC8Hg",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-19 21:52:10:
+PUT /v1/users/08af17f9-5999-43d5-8e61-15b99ca32fae/general-info 
+REQUEST: {
+  "businessAreaId": "93328420-7a5a-4395-8364-8676dd086059",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "phoneNumber": "+966989898900",
+  "role": "super_admin",
+  "preferredLanguage": "EN"
+}
+2024-02-19 21:52:11:
+PUT /v1/users/08af17f9-5999-43d5-8e61-15b99ca32fae/general-info 
+RESPONSE: {
+  "businessAreaId": "93328420-7a5a-4395-8364-8676dd086059",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_ae_sadm_nxt_ey@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+966989898900",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-19 21:52:11:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-19 21:52:11:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "9ac410ba-23f7-4c40-b1d7-3176b978ec00",
+  "userId": "08af17f9-5999-43d5-8e61-15b99ca32fae",
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-19T21:52:11Z",
+  "updatedAt": "2024-02-19T21:52:11Z"
+}
+2024-02-19 21:52:11:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "5ffd62da-6f1d-44bd-a728-90534396fe87",
+  "userId": "08af17f9-5999-43d5-8e61-15b99ca32fae",
+  "role": "super_admin"
+}
+2024-02-19 21:52:12:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:12:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "name": "Mexico company - bg",
+  "legalName": "Mexico company - bg",
+  "country": "MX",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Av Mexico 123",
+    "line2": "",
+    "country": "MX",
+    "state": "CDMX",
+    "city": "CDMX",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "MXN",
+  "exposure": "1x"
+}
+2024-02-19 21:52:12:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "name": "Mexico company - bg",
+  "legalName": "Mexico company - bg",
+  "country": "MX",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Av Mexico 123",
+    "line2": "",
+    "country": "MX",
+    "state": "CDMX",
+    "city": "CDMX",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "MXN",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-19T21:52:12Z",
+  "updatedAt": "2024-02-19T21:52:12Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-19 21:52:12:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-19 21:52:12:
+LEDGER PARAMS: [
+  "31ce58a6-d7b8-4d6f-bb7b-cb584228f478"
+]
+2024-02-19 21:52:12:
+QUERY RESULT: [
+  {
+    "customer_id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-20T02:52:12.512Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "MXN",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "1722076774200",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "1722076774200",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-19 21:52:12:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-19 21:52:12:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:12:
+PUT /v1/admin/customers/31ce58a6-d7b8-4d6f-bb7b-cb584228f478/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-19 21:52:13:
+PUT /v1/admin/customers/31ce58a6-d7b8-4d6f-bb7b-cb584228f478/contract-signed 
+RESPONSE: {
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "contractSigned": true
+}
+2024-02-19 21:52:13:
+POST /v1/customers/31ce58a6-d7b8-4d6f-bb7b-cb584228f478/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-19 21:52:13:
+POST /v1/customers/31ce58a6-d7b8-4d6f-bb7b-cb584228f478/business-areas 
+RESPONSE: {
+  "id": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+  "name": "Engineering",
+  "customerID": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "UpdatedAt": "2024-02-19T21:52:13Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-19 21:52:13:
+JANUS PARAMS: [
+  "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "Engineering"
+]
+2024-02-19 21:52:13:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-19 21:52:14:
+QUERY RESULT: [
+  {
+    "id": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+    "name": "Engineering",
+    "customer_id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+    "updated_at": "2024-02-20T02:52:13.332Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-19 21:52:14:
+POST /v1/users 
+REQUEST: {
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "businessAreaID": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "phoneNumber": "+529876786544",
+  "role": "user",
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "MXN"
+}
+2024-02-19 21:52:16:
+POST /v1/users 
+RESPONSE: {
+  "id": "edaa758d-c0fb-4e16-99e9-2fa7a6bea235",
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "businessAreaId": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "password": "69OHouBL7Z8h2`0*",
+  "email": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+529876786544",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "MXN",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-19 21:52:16:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-19 21:52:16:
+LEDGER PARAMS: [
+  "edaa758d-c0fb-4e16-99e9-2fa7a6bea235"
+]
+2024-02-19 21:52:16:
+QUERY RESULT: [
+  {
+    "customer_id": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+    "user_id": "edaa758d-c0fb-4e16-99e9-2fa7a6bea235",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "MXN",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-20T02:52:16.359Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "MXN",
+    "pref_currency_credit_limit": "200000000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-19 21:52:16:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "userId": "edaa758d-c0fb-4e16-99e9-2fa7a6bea235",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-19 21:52:16:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:16:
+PUT /v1/users/edaa758d-c0fb-4e16-99e9-2fa7a6bea235/password 
+REQUEST: {
+  "oldPassword": "69OHouBL7Z8h2`0*",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:18:
+PUT /v1/users/edaa758d-c0fb-4e16-99e9-2fa7a6bea235/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-19 21:52:18:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:20:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiMzFjZTU4YTYtZDdiOC00ZDZmLWJiN2ItY2I1ODQyMjhmNDc4IiwiZXhwIjoxNzA4Mzg2NzQwLCJpYXQiOjE3MDgzNzk1NDAsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6ImVkYWE3NThkLWMwZmItNGUxNi05OWU5LTJmYTdhNmJlYTIzNSIsInRva2VuVXNhZ2UiOiJpZCJ9.bAYGBpX6_ICCW9X-TYAvCpsLUa4FIHhZ-rpvO6BMCiUjYV-7aO8ViynJiKigloQjVGQhvojr3VrwHMg521ydufgRz94jvJaXXOg9Lc91rwDDWLkQjC_or5oj_2oSwz3GaLi3SLjQg3ICnpU6zKlNFlRWOjyPl4M3uxYdyGTYsfKDAkdgAPkBthImhKX6J27x7yUJ67vA7opvo9QrzevV8KQS9B8cX4bfdwFNmh32VzktmAYUzwFYlJX1hlP0XDAbhDIiNKZvfjkVqFRg4mUwo2z7RH9gV42uv4kizaZw2ZTBc_1o649AVAPYynJFDSq6ZKik6hjyZQjWRAxWpqghlT3BdCnuIT5p7ot4BxGU0U7VnFeld3nxmAZEkHiJshwVBVwhstINJ_4RW8wyahD73R0Q0jqFVR3bBSRtB5ZlHG_B3x-yHNw2xiehnZi0hyj2MsHjLo7zsXkGp0iliicLls9EWiOXUiLLeqXYfm-MHXx3QOthQgpacdXVm-CU9NyBaFf2MZQYZG4RM_wHW-pyirvdXa8Wu_is4qUpWu8JGgNLoBB6I9BbMtYXZeG_mzDeeJ_pAW5LlOx9I8TLh5Qn2oI8kkMyqvKyPmPPDVPYaq5dVaV1HRmmYg1BvGVedmdR7zTTX9LxgKFJ0ahM5Mzm96ENy2cwFzYbZibswRoqoR8",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-19 21:52:20:
+PUT /v1/users/edaa758d-c0fb-4e16-99e9-2fa7a6bea235/general-info 
+REQUEST: {
+  "businessAreaId": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "phoneNumber": "+529876786544",
+  "role": "super_admin",
+  "preferredLanguage": "ES"
+}
+2024-02-19 21:52:20:
+PUT /v1/users/edaa758d-c0fb-4e16-99e9-2fa7a6bea235/general-info 
+RESPONSE: {
+  "businessAreaId": "d376f8a2-3456-48ae-b53b-7c09c51499f1",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_mx_sadm_nxt_bg@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+529876786544",
+  "preferredLanguage": "ES",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-19 21:52:20:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-19 21:52:21:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "userId": "edaa758d-c0fb-4e16-99e9-2fa7a6bea235",
+  "role": "super_admin"
+}
+2024-02-19 21:52:21:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "87fc421e-5fe5-4bf4-9b79-0c82d63ff627",
+  "userId": "edaa758d-c0fb-4e16-99e9-2fa7a6bea235",
+  "customerId": "31ce58a6-d7b8-4d6f-bb7b-cb584228f478",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-19T21:52:20Z",
+  "updatedAt": "2024-02-19T21:52:20Z"
+}
+2024-02-19 21:52:21:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:21:
+POST /v1/admin/customers 
+REQUEST: {
+  "id": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "name": "United States company - 1o",
+  "legalName": "United States company - 1o",
+  "country": "US",
+  "parentCompanyId": "",
+  "address": {
+    "line1": "Washington ave",
+    "line2": "",
+    "country": "US",
+    "state": "New York",
+    "city": "New York",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "vip": false,
+  "package": "next",
+  "approvedCreditLine": 100000000000,
+  "defaultCurrency": "USD",
+  "exposure": "1x"
+}
+2024-02-19 21:52:21:
+POST /v1/admin/customers 
+RESPONSE: {
+  "id": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "name": "United States company - 1o",
+  "legalName": "United States company - 1o",
+  "country": "US",
+  "parentCompanyID": "",
+  "address": {
+    "line1": "Washington ave",
+    "line2": "",
+    "country": "US",
+    "state": "New York",
+    "city": "New York",
+    "postalCode": "123456"
+  },
+  "taxID": "GEI180507ID3",
+  "industryCode": "IND-001",
+  "sectorCode": "SEC-001",
+  "package": "next",
+  "billingGroup": "",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "paykii": true
+  },
+  "billingEmails": [],
+  "contractSigned": false,
+  "status": "normal",
+  "vip": false,
+  "defaultCurrency": "USD",
+  "underMigration": false,
+  "migratedFromTribalOne": false,
+  "pendingUpgrade": false,
+  "createdAt": "2024-02-19T21:52:21Z",
+  "updatedAt": "2024-02-19T21:52:21Z",
+  "migratedAt": "",
+  "updatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004",
+  "comments": "",
+  "autoSuspensionEnabled": false,
+  "customerType": "normal",
+  "isSecured": false
+}
+2024-02-19 21:52:21:
+LEDGER QUERY: SELECT * FROM customer_balance WHERE customer_id = $1
+2024-02-19 21:52:21:
+LEDGER PARAMS: [
+  "42dbaada-8161-4333-a361-4cab78154f4c"
+]
+2024-02-19 21:52:21:
+Reading database... Attempt 0/20
+2024-02-19 21:52:22:
+Reading database... Attempt 1/20
+2024-02-19 21:52:24:
+Reading database... Attempt 2/20
+2024-02-19 21:52:25:
+Reading database... Attempt 3/20
+2024-02-19 21:52:26:
+Reading database... Attempt 4/20
+2024-02-19 21:52:27:
+QUERY RESULT: [
+  {
+    "customer_id": "42dbaada-8161-4333-a361-4cab78154f4c",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "100000000000",
+    "temp_limit": "0",
+    "advanced_payment": "0",
+    "other_credits": "0",
+    "past_credits": "0",
+    "dynamic_limit": "100000000000",
+    "expenditure": "0",
+    "payment_terms": "10_days",
+    "updated_at": "2024-02-20T02:52:27.516Z",
+    "updated_by": "system",
+    "exposure": "1x",
+    "preferred_currency": "USD",
+    "past_due": "0",
+    "total_payins": "0",
+    "total_rewards": "0",
+    "past_due_preferred_currency": "0",
+    "total_credits": "0",
+    "total_fees": "0",
+    "last_month_balance": "0",
+    "pref_currency_credit_limit": "100000000000",
+    "pref_currency_temp_limit": "0",
+    "pref_currency_dynamic_limit": "100000000000",
+    "pref_currency_expenditure": "0",
+    "pref_currency_total_payins": "0",
+    "pref_currency_total_credits": "0",
+    "pref_currency_total_fees": "0"
+  }
+]
+2024-02-19 21:52:27:
+PUT /v1/admin/policies/customer 
+REQUEST: {
+  "id": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "virtualCards": true,
+  "physicalCards": true,
+  "bulkPayments": true,
+  "localPayments": true,
+  "internationalPayments": true,
+  "paykii": true
+}
+2024-02-19 21:52:27:
+PUT /v1/admin/policies/customer 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:27:
+PUT /v1/admin/customers/42dbaada-8161-4333-a361-4cab78154f4c/contract-signed 
+REQUEST: {
+  "contractSigned": true
+}
+2024-02-19 21:52:28:
+PUT /v1/admin/customers/42dbaada-8161-4333-a361-4cab78154f4c/contract-signed 
+RESPONSE: {
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "contractSigned": true
+}
+2024-02-19 21:52:28:
+POST /v1/customers/42dbaada-8161-4333-a361-4cab78154f4c/business-areas 
+REQUEST: {
+  "name": "Engineering"
+}
+2024-02-19 21:52:28:
+POST /v1/customers/42dbaada-8161-4333-a361-4cab78154f4c/business-areas 
+RESPONSE: {
+  "id": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+  "name": "Engineering",
+  "customerID": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "UpdatedAt": "2024-02-19T21:52:28Z",
+  "UpdatedBy": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+}
+2024-02-19 21:52:28:
+JANUS QUERY: SELECT * FROM customer_business_areas WHERE customer_id = $1 and name = $2
+2024-02-19 21:52:28:
+JANUS PARAMS: [
+  "42dbaada-8161-4333-a361-4cab78154f4c",
+  "Engineering"
+]
+2024-02-19 21:52:29:
+QUERY RESULT: [
+  {
+    "id": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+    "name": "Engineering",
+    "customer_id": "42dbaada-8161-4333-a361-4cab78154f4c",
+    "updated_at": "2024-02-20T02:52:28.292Z",
+    "updated_by": "1abb4bc2-5a0b-4cca-a18d-5adad9e47004"
+  }
+]
+2024-02-19 21:52:29:
+POST /v1/users 
+REQUEST: {
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "businessAreaID": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "phoneNumber": "+19293452349",
+  "role": "user",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD"
+}
+2024-02-19 21:52:31:
+POST /v1/users 
+RESPONSE: {
+  "id": "afd307df-f965-4b1f-a874-2312c80f6291",
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "businessAreaId": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+  "jobTitle": "Sr QA",
+  "username": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "password": "wY1V7lM?06b5c2%L",
+  "email": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+19293452349",
+  "phoneNumberVerified": false,
+  "enabled": true,
+  "status": "visible",
+  "emailVerified": false,
+  "profileCompleted": true,
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "csAccess": false,
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "bulkPayments": false,
+    "localPayments": false,
+    "internationalPayments": false,
+    "paykii": false
+  },
+  "roles": "user",
+  "monthlyLimit": 200000000,
+  "monthlyLimitCurrency": "USD",
+  "lockedUntil": "0001-01-01T00:00:00Z",
+  "failedAttempts": 0,
+  "migratedFromOne": false,
+  "customerStatus": ""
+}
+2024-02-19 21:52:31:
+LEDGER QUERY: SELECT * FROM user_balance WHERE user_id = $1
+2024-02-19 21:52:31:
+LEDGER PARAMS: [
+  "afd307df-f965-4b1f-a874-2312c80f6291"
+]
+2024-02-19 21:52:31:
+QUERY RESULT: [
+  {
+    "customer_id": "42dbaada-8161-4333-a361-4cab78154f4c",
+    "user_id": "afd307df-f965-4b1f-a874-2312c80f6291",
+    "period_month": "2",
+    "period_year": "2024",
+    "currency": "USD",
+    "credit_limit": "200000000",
+    "expenditure": "0",
+    "updated_at": "2024-02-20T02:52:31.074Z",
+    "updated_by": "system",
+    "unlimited": false,
+    "preferred_currency": "USD",
+    "pref_currency_credit_limit": "200000000",
+    "pref_currency_expenditure": "0"
+  }
+]
+2024-02-19 21:52:31:
+PUT /v1/admin/policies/user 
+REQUEST: {
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "userId": "afd307df-f965-4b1f-a874-2312c80f6291",
+  "policy": {
+    "virtualCards": true,
+    "physicalCards": true,
+    "localPayments": true,
+    "internationalPayments": true,
+    "bulkPayments": true,
+    "paykii": true
+  }
+}
+2024-02-19 21:52:31:
+PUT /v1/admin/policies/user 
+RESPONSE: {
+  "status": "ok"
+}
+2024-02-19 21:52:31:
+PUT /v1/users/afd307df-f965-4b1f-a874-2312c80f6291/password 
+REQUEST: {
+  "oldPassword": "wY1V7lM?06b5c2%L",
+  "newPassword": "Lunes12#Lunes12$",
+  "newPasswordConfirmation": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:34:
+PUT /v1/users/afd307df-f965-4b1f-a874-2312c80f6291/password 
+RESPONSE: {
+  "status": "updated"
+}
+2024-02-19 21:52:34:
+POST /v1/sts/authentication 
+REQUEST: {
+  "username": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "password": "Lunes12#Lunes12$"
+}
+2024-02-19 21:52:36:
+POST /v1/sts/authentication 
+RESPONSE: {
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpLnRyaWJhbGNyZWRpdC5pbyJdLCJjdXN0b21lcklkIjoiNDJkYmFhZGEtODE2MS00MzMzLWEzNjEtNGNhYjc4MTU0ZjRjIiwiZXhwIjoxNzA4Mzg2NzU2LCJpYXQiOjE3MDgzNzk1NTYsImltcGVyc29uYXRlZCI6ZmFsc2UsImltcGVyc29uYXRvciI6IiIsImlzcyI6InN0cy50cmliYWxjcmVkaXQuaW8iLCJyb2xlcyI6WyJ1c2VyIl0sInN1YiI6ImFmZDMwN2RmLWY5NjUtNGIxZi1hODc0LTIzMTJjODBmNjI5MSIsInRva2VuVXNhZ2UiOiJpZCJ9.cdN6ZDtUk5Sanjs9OuzrbpnUAetPvW7RpenDxwmElXae_vxm9Q550ME9No7Q1xrjX5ZIJTdxW3o-avBooO6GuMA84i7yUJXRZIOaSYx0SXAPCwcMgHBL_QBBzX5b4Lo1600KjoMbXDKtp5z7J5HxM-bs48qvzIv9sx_drHQpcTOLNQU78nYU6xRw5CEHYlww4Rqcf5MmytYUdv8S-oIEjtQ_BFwJm4Ou5oKln7fwLCkD_Zj3mXAKJMNerOjVn3LROPGU61FOsvVm2F7m3K_zgwI0m-6LjblQVzSsZPjozhj8mFn129AKrFkddjlbQ8oUjLFAWFHo7SHO508RQx_wl4e3jiBAGR_nukpAWfEHehTij5Nr2Dbm6stVOiDRGWewTDPrhTkx5S2u4ETp9m0lneU15sZvTnseMHe0Q7g2vqcctE9_-lLbrFSqZW2t2L8jaghyVxPDiqSPCSiVrHQIcCSQFhZ1xGQvf7X9knBWpQ1Ecud3yOLV2npWmI1SPeMIizGffkhtLklHqXhtR7wuNK0sN6Ajne24rfUv7UH4Dd_I4YhQ7p6rN3FrHHAmGowJ1HnEIpbAI4G0bX9NdkvRLsPO7lrU9jHRsY8e14X5DxOCWnS1pv4vMXHBVVmAXp3rjA-hyxQr3ax4e9TMRxhTgYO2MOkSkSMK2gWrgPO6uY8",
+  "tokenType": "bearer",
+  "expiresIn": 7200
+}
+2024-02-19 21:52:36:
+PUT /v1/users/afd307df-f965-4b1f-a874-2312c80f6291/general-info 
+REQUEST: {
+  "businessAreaId": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+  "jobTitle": "Sr QA",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "email": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "phoneNumber": "+19293452349",
+  "role": "super_admin",
+  "preferredLanguage": "EN"
+}
+2024-02-19 21:52:36:
+PUT /v1/users/afd307df-f965-4b1f-a874-2312c80f6291/general-info 
+RESPONSE: {
+  "businessAreaId": "d654230a-6101-4c27-95bd-d14e7fb5bc8c",
+  "jobTitle": "Sr QA",
+  "email": "jason.lopez+dev_us_sadm_nxt_1o@tribal.credit",
+  "firstName": "Jason",
+  "lastName": "super_admin",
+  "phoneNumber": "+19293452349",
+  "preferredLanguage": "EN",
+  "legalRepresentative": true,
+  "phoneNumberVerified": false
+}
+2024-02-19 21:52:36:
+POST /v1/cards 
+REQUEST: {
+  "currency": "USD",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "tags": [
+    "office-expenses"
+  ]
+}
+2024-02-19 21:52:36:
+POST /v1/cards 
+RESPONSE: {
+  "cardId": "8f59d25f-5fe2-4f6f-bd49-0dc226b107cf",
+  "userId": "afd307df-f965-4b1f-a874-2312c80f6291",
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "issuerName": "",
+  "currency": "USD",
+  "status": "pending",
+  "suspended": false,
+  "customerLock": false,
+  "cardholder": "JASON SUPERADMIN",
+  "nickname": "new card",
+  "cardType": "virtual",
+  "cardSubtype": "",
+  "cardLimit": 150000,
+  "unlimited": false,
+  "deliveryDetails": {
+    "address": {
+      "line1": "",
+      "line2": "",
+      "betweenStreet": "",
+      "andStreet": "",
+      "country": "",
+      "state": "",
+      "city": "",
+      "neighborhood": "",
+      "outsideNumber": "",
+      "internalNumber": "",
+      "postalCode": ""
+    },
+    "status": ""
+  },
+  "tags": [
+    "office-expenses"
+  ],
+  "createdAt": "2024-02-19T21:52:36Z",
+  "updatedAt": "2024-02-19T21:52:36Z"
+}
+2024-02-19 21:52:36:
+PUT /v1/admin/policies/user-role 
+REQUEST: {
+  "customerId": "42dbaada-8161-4333-a361-4cab78154f4c",
+  "userId": "afd307df-f965-4b1f-a874-2312c80f6291",
+  "role": "super_admin"
+}
+2024-02-19 21:52:36:
+PUT /v1/admin/policies/user-role 
+RESPONSE: {
+  "status": "ok"
+}

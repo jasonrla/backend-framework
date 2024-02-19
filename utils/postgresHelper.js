@@ -33,6 +33,19 @@ class PostgresHelper {
         }
     }
 
+    async insertQuery(pool, query, params) {
+        const client = await pool.connect();
+        try {
+            const res = await client.query(query, params);
+            return res.rowCount;
+        } catch (e) {
+            console.log("QUERY ERROR:", e);
+            throw e;
+        } finally {
+            client.release();
+        }
+    }
+
     async closePools() {
         for (const key in this.pools) {
             await this.pools[key].end();
@@ -65,5 +78,7 @@ const poolJanus = postgresHelper.createPool('janus', postgresHelper.createConnec
 module.exports = {
     executeQueryLedger: (query, params) => postgresHelper.executeQuery(poolLedger, query, params),
     executeQueryJanus: (query, params) => postgresHelper.executeQuery(poolJanus, query, params),
+    insertQueryJanus: (query, params) => postgresHelper.insertQuery(poolJanus, query, params),
+    insertQueryLedger: (query, params) => postgresHelper.insertQuery(poolLedger, query, params),
     closePools: () => postgresHelper.closePools()
 };

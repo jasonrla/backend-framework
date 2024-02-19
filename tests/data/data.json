@@ -1,0 +1,106 @@
+{
+    "janus": {
+      "authentication": {
+        "username": "xxxxxxxxx",
+        "password": "xxxxxxxxx"
+      },
+      "newCustomer": {
+        "id": "xxxxxxxxx",
+        "name": "xxxxxxxxx",
+        "legalName": "xxxxxxxxx",
+        "country": "xxxxxxxxx",
+        "parentCompanyId": "",
+        "address": {
+            "line1": "xxxxxxxxx",
+            "line2": "",
+            "country": "xxxxxxxxx",
+            "state": "xxxxxxxxx",
+            "city":  "xxxxxxxxx",
+            "postalCode": "123456"
+        },
+        "taxID": "GEI180507ID3",
+        "industryCode": "IND-001",
+        "sectorCode": "SEC-001",
+        "vip": false,
+        "package": "xxxxxxxxx",
+        "approvedCreditLine": 100000000000,
+        "defaultCurrency": "xxxxxxxxx",
+        "exposure": "1x"
+      },
+      "newUser": {
+        "customerId": "xxxxxxxxx",
+        "businessAreaID": "xxxxxxxxx",
+        "jobTitle": "Sr QA",
+        "firstName": "Jason",
+        "lastName": "xxxxxxxxx",
+        "email": "xxxxxxxxx",
+        "phoneNumber": "xxxxxxxxx",
+        "role": "user",
+        "preferredLanguage": "xxxxxxxxx",
+        "legalRepresentative": true,
+        "monthlyLimit": 200000000,
+        "monthlyLimitCurrency": "xxxxxxxxx"
+      },
+      "newBusinessArea": {
+        "name": "Engineering"
+      },
+      "contractSigned": {
+        "contractSigned": true
+      },
+      "updateCustomerPolicy":{
+        "id": "xxxxxxxxx",
+        "virtualCards": true,
+        "physicalCards": true,
+        "bulkPayments": true,
+        "localPayments": true,
+        "internationalPayments": true,
+        "paykii": true
+      },
+      "updateUserPolicy":{
+        "customerId": "xxxxxxxxx",
+        "userId": "xxxxxxxxx",
+        "policy": {
+          "virtualCards": true,
+          "physicalCards": true,
+          "localPayments": true,
+          "internationalPayments": true,
+          "bulkPayments": true,
+          "paykii": true
+        }
+      },
+      "changePassword": {
+        "oldPassword": "xxxxxxxxx",
+        "newPassword": "xxxxxxxxx",
+        "newPasswordConfirmation": "xxxxxxxxx"
+      },
+      "updateRole": {
+        "customerId": "xxxxxxxxx",
+        "userId": "xxxxxxxxx",
+        "role": "xxxxxxxxx"
+      },
+      "updateGeneralInfo" : {
+        "businessAreaId": "xxxxxxxxx",
+        "jobTitle": "Sr QA",
+        "firstName": "Jason",
+        "lastName": "xxxxxxxxx",
+        "email": "xxxxxxxxx",
+        "phoneNumber": "xxxxxxxxx",
+        "role": "xxxxxxxxx",
+        "preferredLanguage": "xxxxxxxxx"
+      }
+    },
+    "aurora": {
+      "newCard": {
+        "currency": "USD",
+        "nickname": "new card",
+        "cardType": "virtual",
+        "cardSubtype": "",
+        "cardLimit": 150000,
+        "tags": [
+          "office-expenses"
+        ]
+      },
+      "payload4": {
+      }
+    }
+  }

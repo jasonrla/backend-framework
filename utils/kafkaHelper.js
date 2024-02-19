@@ -2,6 +2,7 @@ process.env.KAFKAJS_NO_PARTITIONER_WARNING = "1";
 
 const { Kafka } = require('kafkajs');
 const { getIsoDate, generateUUID } = require('../utils/utilsHelper.js');
+const log = require('../utils/utilsHelper');
 
 function createKafkaClient() {
     return new Kafka({
@@ -30,8 +31,8 @@ async function sendEvent(topic, type, messages) {
             "data": message
         });
     }
-
-    console.log("Kafka:",payloads);
+    
+    log.logToTxt("Kafka:",payloads);
 
     const kafka = createKafkaClient();
     const producer = kafka.producer();

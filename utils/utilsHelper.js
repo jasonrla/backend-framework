@@ -1,5 +1,5 @@
-
-const { closePools, executeQueryLedger, executeQueryJanus } = require('../utils/postgresHelper');
+const fs = require('fs');
+const { closePools, executeQueryLedger, executeQueryJanus, insertQueryJanus, insertQueryLedger } = require('../utils/postgresHelper');
 
 async function query(hub, query, params) {
     let records;
@@ -7,8 +7,8 @@ async function query(hub, query, params) {
     let delay = 1000;
     let currentAttempt = 0;
 
-    console.log(hub.toUpperCase(),"QUERY:",query)
-    console.log(hub.toUpperCase(),"PARAMS:",params)
+    logToTxt(hub.toUpperCase(),"QUERY:",query)
+    logToTxt(hub.toUpperCase(),"PARAMS:",params)
 
     if(query.startsWith("SELECT")){
         do {
@@ -19,7 +19,7 @@ async function query(hub, query, params) {
             }
 
             if (records.length === 0) {
-                console.log(`Reading database... Attempt ${currentAttempt}/${maxAttempts}`);
+                logToTxt(`Reading database... Attempt ${currentAttempt}/${maxAttempts}`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 currentAttempt++;
             }
@@ -29,16 +29,30 @@ async function query(hub, query, params) {
         } while (records.length === 0 && currentAttempt < maxAttempts);
         
         if (records.length === 0) {
-            throw new Error("The maximum number of attempts was exceeded without finding any records.");
+            logToTxt("The maximum number of attempts was exceeded without finding any records.");
+            return [];
+            //throw new Error("The maximum number of attempts was exceeded without finding any records.");
         } else {
-            console.log("QUERY RESULT:", records);
+            logToTxt("QUERY RESULT:", records);
             return records;
         }
     }
     else if (query.startsWith("UPDATE") || (query.startsWith("DELETE"))){
-            if (hub == 'ledger') {
-                records = await executeQueryLedger(query, params);
-                console.log("LEDGER QUERY RESULT:", records);
+        if (hub === 'ledger') {
+            records = await executeQueryLedger(query, params);
+            logToTxt("LEDGER QUERY RESULT:", records);
+        }
+    }
+    else if (query.startsWith("INSERT")){
+        if (hub === 'janus') {
+            records = await insertQueryJanus(query, params);
+            logToTxt("JANUS INSERT RESULT:", records);
+            return records;
+        }
+        else if (hub === 'ledger') {
+            records = await insertQueryLedger(query, params);
+            logToTxt("LEDGER INSERT RESULT:", records);
+            return records;
         }
     }
 }
@@ -51,15 +65,26 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function getRandomNumber(length) {
+    const num = Math.random() * (99999 - 10000) + 10000;
+    return num;
+}
+
+function getRandomDecimalNumber(length) {
+    const num = Math.random() * (999 - 100) + 100;
+    return Number(num.toFixed(2));
+}
+
 function getRandomValue(length) {
     const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
     return Array.from({ length }, () => characters[Math.floor(Math.random() * characters.length)]).join('');
 }
 
-function getCustomerDetails(user, domain, env, finalRole, country, packageName=''){
+function getCustomerDetails(user, env, finalRole, country, packageName){
 
-    let country_name, defaultCurrency, state, address, name, phoneNumber, preferredLanguage, preferredCurrency;
-    let company_number = getRandomValue(5);
+    let country_name, defaultCurrency, state, address, name, phoneNumber, preferredLanguage, preferredCurrency, role;
+    let company_number = getRandomValue(2);
+    let domain = 'tribal.credit';
 
     switch(country){
         case "Mexico":
@@ -119,12 +144,50 @@ function getCustomerDetails(user, domain, env, finalRole, country, packageName='
             break;
     }
 
+    switch(finalRole){
+        case "admin":
+            role = "adm";
+            break;
+        case "user":
+            role = "usr";
+            break;
+        case "super_admin":
+            role = "sadm";
+            break;
+        case "accountant":
+            role = "acc";
+            break;
+    }
+
+    if(packageName != ''){
+        switch(packageName){
+            case "next":
+                packageNameAbbr = "nxt";
+                break;
+            case "capital90":
+                packageNameAbbr = "c90";
+                break;
+            case "capital60":
+                packageNameAbbr = "c60";
+                break;
+            case "capital":
+                packageNameAbbr = "cap";
+                break;
+        }   
+    }
+
+    const email_1 = [env.toLowerCase(), country_name.toLowerCase(), role.toLowerCase(), packageNameAbbr, company_number]
+    const email_2 = [user,email_1.join("_")];
+    const email_3 = [email_2.join("+"),domain];
+    const email = email_3.join("@");
+
+
     return {
         "customerId": generateUUID(),
         "name": name,
         "role": finalRole,
         "country": country_name,
-        "email": user + "+" + env.toLowerCase() + "_" + country_name.toLowerCase() + "_" + finalRole.toLowerCase() + "_" + company_number + domain,
+        "email": email,
         "defaultCurrency": defaultCurrency,
         "state": state,
         "address": address,
@@ -139,6 +202,18 @@ function getIsoDate() {
     const date = new Date();
     const isoDate = date.toISOString();
     return isoDate;
+}
+
+function getCurrentMonthNumber() {
+    const date = new Date();
+    const monthNumber = date.getMonth() + 1;
+    return monthNumber;
+}
+
+function getCurrentYearNumber() {
+    const date = new Date();
+    const yearNumber = date.getFullYear();
+    return yearNumber;
 }
 
 function generateUUID() {
@@ -157,12 +232,78 @@ async function handleError(error, apiResponse) {
     throw error;
 }
 
+function logToTxtData(...args) {
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().replace(/T/, ' ').replace(/\..+/, '');
+
+    if (args[1] === '/v1/users' || args[1] === '/v1/cards') {
+        const formattedArgs = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg, null, 2) : arg));
+        const fileName = `log_data.txt`;
+        let specificData = {};
+        
+        //let username;
+
+        try {
+            if (args[1] === '/v1/users') {
+                //username = args[3].username
+                specificData = "customerId: " + args[3].customerId + `\n` + "username: " + args[3].username ;
+            } else if (args[1] === '/v1/cards') {
+                //"customerId": args[3].customerId, "userId": args[3].userId, 
+                specificData = "cardId: " + args[3].cardId + `\n`;
+            }
+        } catch (error) {
+            console.error('Error parsing JSON:', error);
+        }
+
+        const message = specificData;//JSON.stringify(specificData, null, 2);
+        console.log(message);
+
+        //const fileName = `log_data.txt`;
+
+        fs.appendFile(fileName, `\n${message}`, (err) => {
+            if (err) {
+                console.error(`Error writing to ${fileName}:`, err);
+            }
+        });
+    }
+}
+
+function logToTxt(...args) {
+    // Get current date and time
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString().replace(/T/, ' ').replace(/\..+/, '');
+  
+    // Convert objects to pretty-printed JSON strings
+    const formattedArgs = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg, null, 2) : arg));
+  
+    // Concatenate all arguments into a single message
+    const message = formattedArgs.join(' ');
+  
+    // Log to console
+    console.log(message);
+  
+    // Append to text file with current date and time in the name
+    const fileName = `log.txt`;
+  
+    fs.appendFile(fileName, `${formattedDate}:\n${message}\n`, (err) => {
+      if (err) {
+        console.error(`Error writing to ${fileName}:`, err);
+      }
+    });
+}
+
 module.exports = { 
+    logToTxt,
+    logToTxtData,
     closeDBPools, 
     query, 
     getRandomValue, 
     getCustomerDetails, 
     getIsoDate, 
     generateUUID, 
-    handleError
+    handleError,
+    getCurrentMonthNumber,
+    getCurrentYearNumber,
+    getRandomDecimalNumber,
+    getRandomNumber
 };
