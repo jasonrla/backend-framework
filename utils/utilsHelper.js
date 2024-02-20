@@ -233,6 +233,7 @@ async function handleError(error, apiResponse) {
 }
 
 function logToTxtData(...args) {
+    /*
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().replace(/T/, ' ').replace(/\..+/, '');
 
@@ -265,10 +266,11 @@ function logToTxtData(...args) {
                 console.error(`Error writing to ${fileName}:`, err);
             }
         });
-    }
+    }*/
 }
 
 function logToTxt(...args) {
+    
     // Get current date and time
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString().replace(/T/, ' ').replace(/\..+/, '');
@@ -277,11 +279,11 @@ function logToTxt(...args) {
     const formattedArgs = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg, null, 2) : arg));
   
     // Concatenate all arguments into a single message
-    const message = formattedArgs.join(' ');
+     const message = formattedArgs.join(' ');
   
     // Log to console
     console.log(message);
-  
+  /*
     // Append to text file with current date and time in the name
     const fileName = `log.txt`;
   
@@ -290,6 +292,7 @@ function logToTxt(...args) {
         console.error(`Error writing to ${fileName}:`, err);
       }
     });
+    */
 }
 
 module.exports = { 

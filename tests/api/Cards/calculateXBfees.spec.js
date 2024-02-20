@@ -6,7 +6,7 @@ const data = require('../../data/cards_data');
 
 describe('Calculate XB fees', () => { //test2
  
-    data.forEach(({ username, amount, merchantCountry, merchantCurrency, merchantAmount, provider, xbFeeRateExpected }) => {
+    data.forEach(({ username, password, amount, merchantCountry, merchantCurrency, merchantAmount, provider, xbFeeRateExpected }) => {
 
         const currentDate = new Date();
         const currentMonth = currentDate.getMonth() + 1;
@@ -20,7 +20,7 @@ describe('Calculate XB fees', () => { //test2
                 "username": username,
                 "password": password,
             };
-
+            
             response = await post(`/v1/sts/authentication`, requestBody);
             expect(typeof response.body.token).toBe('string');
 
@@ -279,5 +279,6 @@ describe('Calculate XB fees', () => { //test2
             expect(result[0].aggregation_data.crossBorderFeeUSDRate).toBe(fxRate.toString());
 
         });
+
     });
 });

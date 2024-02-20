@@ -1,0 +1,27 @@
+image: node:16.20.2
+
+stages:
+  - setup
+  - test
+
+variables:
+  SECURE_FILES_DOWNLOAD_PATH: 'src'
+
+cache:
+  paths:
+    - node_modules/
+
+download_secure_files:
+  stage: setup
+  script:
+    - node downloadSecureFiles.js
+
+install_dependencies:
+  stage: setup
+  script:
+    - npm ci
+
+test:
+  stage: test
+  script:
+    - npm run all

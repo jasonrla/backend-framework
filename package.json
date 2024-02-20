@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "all": "npm run cards_xb && npm run cards_cancelled && npm run cards_reversed && npm run cards_settled && npm run create_customer && npm run create_user && npm run payout_cancelled && npm run payout_captured && npm run payout_reversed && npm run customerlog",
     "cards_xb": "jest calculateXBfees.spec.js",
     "cards_cancelled": "jest card_cancelled.spec.js",
     "cards_reversed": "jest card_reversed.spec.js",
