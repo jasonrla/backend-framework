@@ -4,9 +4,6 @@ stages:
   - setup
   - test
 
-variables:
-  SECURE_FILES_DOWNLOAD_PATH: 'src'
-
 cache:
   paths:
     - node_modules/
