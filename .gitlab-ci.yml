@@ -15,6 +15,6 @@ setup:
 
 test:
   stage: test
-  script: npm test
+  script: npm run all
   dependencies:
     - setup
