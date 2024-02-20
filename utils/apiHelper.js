@@ -1,3 +1,4 @@
+require('dotenv').config();
 const supertest = require('supertest');
 const url = "https://dev.api.tribalcredit.io";
 const request = supertest(url);

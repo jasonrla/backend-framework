@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('dotenv').config();
 const { closePools, executeQueryLedger, executeQueryJanus, insertQueryJanus, insertQueryLedger } = require('../utils/postgresHelper');
 
 async function query(hub, query, params) {

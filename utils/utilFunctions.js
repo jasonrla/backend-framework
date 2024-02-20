@@ -1,4 +1,5 @@
 const { get, post, put } = require('./apiHelper');
+require('dotenv').config();
 
 async function generateAdminToken(){
     const requestBody = {
