@@ -4,21 +4,17 @@ stages:
   - setup
   - test
 
-cache:
-  paths:
-    - node_modules/
-
-download_secure_files:
+setup:
   stage: setup
   script:
     - node downloadSecureFiles.js
-
-install_dependencies:
-  stage: setup
-  script:
-    - npm ci
+    - npm install
+  artifacts:
+    paths:
+      - node_modules/
 
 test:
   stage: test
-  script:
-    - npm run all
+  script: npm test
+  dependencies:
+    - setup
