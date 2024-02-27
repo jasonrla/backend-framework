@@ -6,10 +6,7 @@ stages:
 
 setup:
   stage: setup
-  variables:
-    SECURE_FILES_DOWNLOAD_PATH: '.'
   script:
-    - curl -s https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer | bash
     - npm install
   artifacts:
     paths:
@@ -17,6 +14,10 @@ setup:
 
 test:
   stage: test
-  script: npm run all
+  variables:
+    SECURE_FILES_DOWNLOAD_PATH: '.'
+  script:
+    - curl -s https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer | bash
+    - npm run all
   dependencies:
     - setup
