@@ -6,8 +6,10 @@ stages:
 
 setup:
   stage: setup
+  variables:
+    SECURE_FILES_DOWNLOAD_PATH: '.'
   script:
-    - node downloadSecureFiles.js
+    - curl -s https://gitlab.com/gitlab-org/incubation-engineering/mobile-devops/download-secure-files/-/raw/main/installer | bash
     - npm install
   artifacts:
     paths:
